@@ -1,0 +1,30 @@
+extends Base
+
+block content
+    form(method='POST' action='/create')
+                        div.form-group
+                            label(for='name') Name:
+                            input#name.form-control(type='text', placeholder='first and last' name='name')
+                        div.form-group
+                            label(for='email') Email:
+                            input#email.form-control(type='email', placeholder='name@email.com' name='email')
+                        div.form-group
+                            label(for='pw') Password:
+                            input#pw.form-control(type='password' name='password' placeholder="password")  
+                        button.btn.btn-primary(type='submit') crear
+    .container.pt-4
+    h2 Operaciones CRUD
+    .row.mt-5
+      .col-12
+        table.table.bg-white
+          thead
+            tr
+              th(scope='col') Id
+              th(scope='col') Name
+              th(scope='col') Email
+          tbody
+          - for (var i = 0; i <Users.length; i++)
+            tr
+              th(scope='row') #{Users[i].id}
+              td #{Users[i].name}
+              td #{Users[i].email}

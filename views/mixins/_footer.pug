@@ -1,0 +1,16 @@
+mixin footer()
+  footer.footer
+    .container
+      hr
+      .row.align-items-center.justify-content-md-between
+        .col-md-6
+          .copyright!=`© ${new Date().getFullYear()} `
+            a(href="/") Brand
+        .col-md-6
+          ul.nav.nav-footer.justify-content-end
+            li.nav-item
+              a.nav-link test 1
+            li.nav-item
+              a.nav-link test 2
+            li.nav-item
+              a.nav-link test 3

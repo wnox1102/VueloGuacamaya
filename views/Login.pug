@@ -1,0 +1,17 @@
+extends Base
+
+block content
+    .row
+        .col-sm-9
+            .card(style="position:relative;left:40%;top:50%;width:50%;opacity:0.88", class="shadow-lg p-3 mb-5 rounded")
+                .card-title(style="text-align:center;") #{title}
+                hr
+                .card-body
+                    form(method='POST' )
+                        div.form-group
+                            label(for='email') Email:
+                            input#email.form-control(type='email', placeholder='name@email.com' name='email')
+                        div.form-group
+                            label(for='pw') Password:
+                            input#pw.form-control(type='password' name='password', placeholder="Password")  
+                        button.btn.btn-primary(type='submit') Sign In

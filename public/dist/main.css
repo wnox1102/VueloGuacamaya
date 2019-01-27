@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,500);
+* {
+  font-family: "Quicksand", sans-serif; }
+
+body {
+  background-color: #e5e5e5;
+  background-image: url(https://www.avianca.com/content/dam/avianca_new/contenido/aviones/Banner_avion.jpg?newux=true);
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#Buscador {
+  position: relative;
+  left: 50%;
+  top: 30%;
+  background-size: cover;
+  opacity: 0.88; }
+
+#Aero {
+  position: relative;
+  left: 35%;
+  top: 30%;
+  background-size: cover;
+  opacity: 0.9; }
+
+
+/*# sourceMappingURL=main.css.map*/

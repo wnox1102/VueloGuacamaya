@@ -1,0 +1,17 @@
+extends Base
+
+block content
+    .row
+        .col-sm-6
+            .card(style="position:relative; left: 50%; top: 30%; background-size:cover;")
+                .card-title(style="text-align:center") BUSCAR VUELOS
+                    hr
+                    .card-body
+                        form
+                            .form-row
+                                .form-group.col-md-5
+                                    label(style="text-align:rigth;") ORIGEN
+                                    select.form-control
+                                        - let numeros=[1,2,3];
+                                        each val in numeros
+                                            option #{val}

@@ -1,0 +1,45 @@
+extends Base
+
+block content
+    .row
+        .col-sm-6
+            #Buscador.card(class="shadow-lg p-3 mb-5  rounded")
+                .card-title(style="text-align:center") BUSCAR VUELOS
+                    hr
+                    .card-body
+                        form
+                            .form-row
+                                .form-group.col-md-3
+                                    label ORIGEN
+                                    select.form-control
+                                        - let numeros=[1,2,3];
+                                        each val in numeros
+                                            option #{val}
+                                .form-group.col-md-3
+                                    label DESTINO
+                                    select.form-control
+                                        
+                                        each val in numeros
+                                            option #{val}
+                                .form-group.col-md-2
+                                    label SALIDA
+                                    #datetimepicker
+                                    .input-group.date-time
+                                        input.form-control
+                                        span.input-group-addon
+                                            span.fa.fa-calendar
+
+                                    
+                                    
+                                .form-group.col-md-2
+                                    label RETORNO
+                                    input.form-control(type='email', placeholder='name@email.com' name='email')
+                                .form-group.col-md-2
+                                    label PASAJEROS
+                                    select.form-control
+                                        
+                                        each val in numeros
+                                            option #{val}
+                    .card-footer 
+                        button(class="btn btn-danger btn-circle btn-xl",style="position:relative; left: 45%")
+                            i(class="fa fa-search")

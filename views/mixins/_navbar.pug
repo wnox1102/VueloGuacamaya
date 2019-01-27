@@ -1,0 +1,19 @@
+mixin navbar(link)
+  nav(class="navbar navbar-expand-lg navbar-dark bg-default")
+      .container
+        a(class="navbar-brand", href="/") Brand Logo
+        button(class="navbar-toggler", type="button", data-toggle="collapse", data-target="#navbar-default", aria-controls="navbar-default", aria-expanded="false," aria-label="Toggle navigation")
+          span.navbar-toggler-icon
+        div(class="collapse navbar-collapse", id="navbar-default")
+          .navbar-collapse-header
+            .row
+              .col-6.collapse-brand
+                a(href="#") Brand Logo
+              .col-6.collapse-close
+                button(type="button", class="navbar-toggler", data-toggle="collapse", data-target="#navbar-default", aria-controls="navbar-default", aria-expanded="false", aria-label="Toggle navigation")
+                  span
+                  span
+          ul.navbar-nav.ml-lg-auto
+            each link in links
+              li.nav-item
+                a.nav-link #{link.text}

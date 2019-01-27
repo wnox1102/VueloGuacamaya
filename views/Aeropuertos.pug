@@ -1,0 +1,31 @@
+extends Base
+
+block content 
+    .row
+        .col-sm-8
+            #Aero.card(class="shadow-lg p-3 mb-5  rounded")
+                .card-title: h2 LOS MEJORES AEROPUERTOS PARA TU ATENCION Y SERVICIO
+                hr
+                .card-body
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure nihil quia dignissimos ratione dolor hic nemo, ad dolorum. Itaque illo at dolores magnam tempore tenetur provident quaerat laboriosam. Deserunt, molestias?
+    .row
+        #carouselExampleIndicators.carousel.slide(data-ride="carousel")
+            ol.carousel-indicators
+                li(data-target="#carouselExampleIndicators", data-slide-to="0", class="active")
+                li(data-target="#carouselExampleIndicators", data-slide-to="1")
+                li(data-target="#carouselExampleIndicators", data-slide-to="2")
+            .carousel-inner
+                .carousel-item.active
+                    img(src="./Img/atlanta.jpg", alt="atlanta")
+                .carousel-item
+                    img(src="./Img/paris.jpg", alt="paris")
+                .carousel-item
+                    img(src="./Img/dubai.jpg", alt="dubai")
+            a(class="carousel-control-prev", href="#carouselExampleIndicators", role="button", data-slide="prev")
+                span(class="carousel-control-prev-icon", aria-hidden="true")
+                span(class="sr-only") Previous
+            a(class="carousel-control-next", href="#carouselExampleIndicators", role="button", data-slide="next")
+                span(class="carousel-control-next-icon", aria-hidden="true")
+                span(class="sr-only") Next                                              
+            
