@@ -32,11 +32,32 @@ controller.deleteProduct = async function (id, callback) {
 
 controller.createUser = async function (data) {
         console.log(data.name, data.email, data.password);
-        Users.create(data).then(Users=>{
-            res.render('Home',{title: 'home'})
-        });
+        Users.create(data)
         // code goes here
     
+}
+
+
+controller.UpdateUsers = async function (data,id, callback) {
+    try {
+            let response = await Users.update({
+             name: data.name,
+             email: data.email,
+             password: data.password
+        },{
+            where: {
+                id
+            }
+        });
+
+        callback(null);
+    } catch (error) {
+        callback(error);
+    }
+}
+
+controller.mensaje= async function(){
+    console.log("mensaje");
 }
 
 module.exports = controller;

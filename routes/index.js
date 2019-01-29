@@ -49,4 +49,20 @@ router.post('/create',(req,res)=>{
     UserController.createUser(req.body)
     res.redirect('/Create');
 });
+
+router.post("/Update/:id", (req, res) => {
+    console.log(req.body);
+    if (!!req.params.id) {
+        console.log(req.body);
+      UserController.UpdateUsers(req.body,req.params.id,(err) => {
+        if (err)
+          res.json({
+            success: false,
+            msg: 'Failed to update User'
+          });
+        else
+          res.redirect('/Create');
+      });
+    }
+  });
 module.exports =router;

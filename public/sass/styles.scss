@@ -10,7 +10,7 @@ $grey: #5f5f5f;
 * {
   font-family: $font;
 }
-body{
+#body{
     background-color: #e5e5e5;
     background-image:url(https://www.avianca.com/content/dam/avianca_new/contenido/aviones/Banner_avion.jpg?newux=true);
     width:100vw;
@@ -28,7 +28,7 @@ body{
 
 #Aero{
     position:relative; 
-    left: 35%;
+    left: 25%;
     top: 30%;
     background-size:cover;
     opacity: 0.9
