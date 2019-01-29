@@ -13,6 +13,7 @@ block content
                             input#pw.form-control(type='password' name='password' placeholder="password")  
                         button.btn.btn-primary(type='submit') crear
     .container.pt-4
+    
     h2 Operaciones CRUD
     .row.mt-5
       .col-12
@@ -28,3 +29,6 @@ block content
               th(scope='row') #{Users[i].id}
               td #{Users[i].name}
               td #{Users[i].email}
+              td
+                form(action=`eliminar/${Users[i].id}`,method="POST")
+                  button.btn.btn-outline-danger(type='submit') Eliminar

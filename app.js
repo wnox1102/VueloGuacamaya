@@ -39,6 +39,9 @@ app.use(expressValidator());
 // Se creara en req un propiedad cookies con las cookies que viene de cada peticion
 app.use(cookieParser());
 
+// Sessions nos permite guardar informacion de los visitantes cada vez que hacen una peticion
+// This keeps users logged in and allows us to send flash messages
+
 
 // Middleware propio
 app.use((req, res, next) => {
@@ -53,6 +56,7 @@ app.use((req, res, next) => {
   req.login = promisify(req.login, req);
   next();
 });
+
 
 // Configuracion de las rutas
 app.use("/", routes);

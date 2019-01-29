@@ -20,6 +20,8 @@ const User = sequelize.define("User", {
   }
 });
 
+User.sync();
+
 /*
 User.encrypt = function ({ password }) {
   const salt = bcrypt.genSaltSync(process.env.SALT);

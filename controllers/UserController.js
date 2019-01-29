@@ -14,21 +14,7 @@ controller.getUser = async function (callback) {
         callback(null, error);
     }
 }
-/*
-controller.deleteProduct = async function (id, callback) {
-    try {
-        let response = await Product.update({
-            Activo: false
-        }, {
-            where: {
-                id
-            }
-        });
-        callback(null);
-    } catch (error) {
-        callback(error);
-    }
-}*/
+
 
 controller.createUser = async function (data) {
         console.log(data.name, data.email, data.password);
@@ -37,6 +23,19 @@ controller.createUser = async function (data) {
         });
         // code goes here
     
+}
+
+controller.deleteUser = async function (id, callback) {
+    try {
+        let response = await Users.destroy( {
+            where: {
+                id
+            }
+        });
+        callback(null);
+    } catch (error) {
+        callback(error);
+    }
 }
 
 module.exports = controller;
