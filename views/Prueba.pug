@@ -1,34 +1,61 @@
 extends Base
 
 block content
-    form(method='POST' action='/create')
+    br
+    br
+    .row
+        .col-sm-8
+            .card(class="shadow-lg p-3 mb-5 bg-white rounded", style="position:relative;left:20%;")
+                .card-title 
+                   h5(style="text-align:center;") INGRESE SUS DATOS PARA REGISTRARSE
+                hr
+                .card-body
+                    form(method='POST' action='/create')
                         div.form-group
-                            label(for='name') Name:
-                            input#name.form-control(type='text', placeholder='first and last' name='name')
+                            label(for='name') NOMBRE:
+                            input#name.form-control(type='text', placeholder='Nombre' name='name')
                         div.form-group
-                            label(for='email') Email:
-                            input#email.form-control(type='email', placeholder='name@email.com' name='email')
+                            abel(for='email') CORREO:
+                            input#email.form-control(type='email', placeholder='nombre@hotmail.com' name='email')
                         div.form-group
-                            label(for='pw') Password:
-                            input#pw.form-control(type='password' name='password' placeholder="password")  
-                        button.btn.btn-primary(type='submit') crear
-    .container.pt-4
-    
-    h2 Operaciones CRUD
-    .row.mt-5
-      .col-12
-        table.table.bg-white
-          thead
-            tr
-              th(scope='col') Id
-              th(scope='col') Name
-              th(scope='col') Email
-          tbody
-          - for (var i = 0; i <Users.length; i++)
-            tr
-              th(scope='row') #{Users[i].id}
-              td #{Users[i].name}
-              td #{Users[i].email}
-              td
-                form(action=`eliminar/${Users[i].id}`,method="POST")
-                  button.btn.btn-outline-danger(type='submit') Eliminar
+                            label(for='pw') CONTRASENA:
+                            input#pw.form-control(type='password' name='password' placeholder="contrasena")  
+                        button.btn-primary.btn-lg(type='submit') CREAR
+    hr
+    br   
+    h2(style="position:relative;left:40%;") METODOS CRUD
+    br
+    br
+    .row
+      .col-sm-8
+        .card(class="shadow-lg p-3 mb-5 bg-white rounded",style="position:relative;left:20%;")
+            table.table.bg-white
+                thead
+                    tr(style="text-align:center;")
+                      th(scope='col') Id
+                      th(scope='col') Nombre
+                      th(scope='col') Correo
+                      th(scope='col') Modificar
+                tbody
+                - for (var i = 0; i <Users.length; i++)
+                    tr(style="text-align:center;")
+                        th(scope='row') 
+                           h5 #{Users[i].id}
+                        td 
+                            h5 #{Users[i].name}
+                        td 
+                            h5 #{Users[i].email}
+                        td
+                            form(action=`Update/${Users[i].id}`,method="POST")
+                                div.form-group
+                                    label(for='name') Name:
+                                    input#name.form-control(type='text', placeholder='first and last' name='name')
+                                div.form-group
+                                    label(for='email') Email:
+                                    input#email.form-control(type='email', placeholder='name@email.com' name='email')
+                                div.form-group
+                                    label(for='pw') Password:
+                                    input#pw.form-control(type='password' name='password' placeholder="password") 
+                                button.btn-primary.btn-lg(type='submit') Modificar
+                            form(action=`eliminar/${Users[i].id}`,method="POST")
+                                button.btn.btn-outline-danger(type='submit') Eliminar

@@ -51,6 +51,7 @@ app.use((req, res, next) => {
   next(); // Vamos a la siguiente funcion
 });
 
+
 // promisify convertira las algunas API basadas en callback a Promesas
 app.use((req, res, next) => {
   req.login = promisify(req.login, req);

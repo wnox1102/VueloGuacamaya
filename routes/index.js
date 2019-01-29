@@ -50,6 +50,7 @@ router.post('/create',(req,res)=>{
     res.redirect('/Create');
 });
 
+
 router.post("/eliminar/:id", (req, res) => {
     if (!!req.params.id) {
       UserController.deleteUser(req.params.id, (err) => {
@@ -64,4 +65,22 @@ router.post("/eliminar/:id", (req, res) => {
     }
   });
 
+  router.post("/Update/:id", (req, res) => {
+    console.log(req.body);
+    if (!!req.params.id) {
+        console.log(req.body);
+      UserController.UpdateUsers(req.body,req.params.id,(err) => {
+        if (err)
+          res.json({
+            success: false,
+            msg: 'Failed to update User'
+          });
+        else
+          res.redirect('/Create');
+      });
+    }
+  });
+
+
+  
 module.exports =router;

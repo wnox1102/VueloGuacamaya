@@ -22,7 +22,7 @@ controller.createUser = async function (data) {
             res.render('Home',{title: 'home'})
         });
         // code goes here
-    
+
 }
 
 controller.deleteUser = async function (id, callback) {
@@ -36,6 +36,29 @@ controller.deleteUser = async function (id, callback) {
     } catch (error) {
         callback(error);
     }
+}
+
+
+controller.UpdateUsers = async function (data,id, callback) {
+    try {
+            let response = await Users.update({
+             name: data.name,
+             email: data.email,
+             password: data.password
+        },{
+            where: {
+                id
+            }
+        });
+
+        callback(null);
+    } catch (error) {
+        callback(error);
+    }
+}
+
+controller.mensaje= async function(){
+    console.log("mensaje");
 }
 
 module.exports = controller;
