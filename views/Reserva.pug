@@ -1,4 +1,16 @@
 extends Base
+include mixins/svgSeparator
+include mixins/_cardReserva
+block content
+    section(class="section section-lg section-hero section-shaped")
+        div(class="shape shape-style-1 shape-default")
+        div(class="container shape-container d-flex align-items-center py-lg")
+            div(class="col px-0")
+                div(class="row align-items-center justify-content-center")
+                    div(class="col-lg-6 text-center")
+                        h3(style="color:white;") Aqui se podran reservar los vuelos a los destinos disponibles
+        +Svg()
+    section(class="section section-lg section-hero section-shaped")
+        +cardReserva(h.ReservarVuelo, h.Pasajes)
 
-block content 
-    h3 hola mundo 22
+        

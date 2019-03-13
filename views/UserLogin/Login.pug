@@ -1,0 +1,35 @@
+extends Base
+
+block content
+  section.section.section-lg.login
+    div(class="shape shape-style-1 bg-gradient-default")
+      span
+      span
+      span
+      span
+      span
+      span
+    .container.pt-lg-md
+      .row.justify-content-center
+        .col-sm-6
+          .card.bg-secondary.shadow.border-0
+            .card-head.pt-3
+              h5#titleCard Iniciar Sesion
+            .card-body.px-lg-5.py-lg-5
+              form(action='/login', method='POST')
+                .form-group.mb-3
+                  .input-group.input-group-alternative
+                    .input-group-prepend
+                      span.input-group-text
+                        i.ni.ni-email-83
+                    input.form-control(placeholder="Email", type="email", id="email", name="email")
+                .form-group
+                  .input-group.input-group-alternative
+                    .input-group-prepend
+                      span.input-group-text
+                        i.ni.ni-lock-circle-open
+                    input.form-control(placeholder="Password", type="password", id="password", name="password")
+                .text-center
+                  button.btn.btn-default.my-4(type="submit") Iniciar Sesion
+            .card-footer
+              a#ClickRegister(href="/Register") No te haz registrado aun, click aqui

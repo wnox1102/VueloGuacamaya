@@ -1,0 +1,22 @@
+mixin TableEmpleados( empleado = {} )
+    table.table.bg-white
+                thead
+                    tr(style="text-align:center;")
+                      th(scope='col') Id
+                      th(scope='col') Nombre
+                      th(scope='col') Apellido
+                      th(scope='col') Cedula
+                      th(scope='col') Cargo
+                tbody
+                - for (var i = 0; i <empleado.length; i++)
+                    tr(style="text-align:center;")
+                        th(scope='row') 
+                           h5 #{empleado[i].id}
+                        td 
+                            h5 #{empleado[i].name}
+                        td 
+                            h5 #{empleado[i].lastname}
+                        td
+                            h5 #{empleado[i].cedula}
+                        td
+                            h5 #{empleado[i].cargo}

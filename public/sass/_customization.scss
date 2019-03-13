@@ -1,0 +1,75 @@
+body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+main {
+  min-height: 100vh;
+}
+
+.shape-default {
+  background-image: linear-gradient(
+    180deg,
+    #805dfd 10%,
+    #17004e 95%
+  ) !important;
+
+}
+
+.bg-happy-acid {
+  background-image: linear-gradient(
+    to top,
+    #805dfd 10%,
+    #17004e 95%
+  ) !important;
+}
+
+.login {
+  background-image: linear-gradient(
+    180deg,
+    #4717f8 10%,
+    #17004e 95%
+  ) !important;
+  height: 100vh;
+}
+
+.card{
+  background-color: rgb(182, 182, 182)
+}
+
+#title{
+  position: relative;
+  left: 40%;
+  color: #fafafa;
+}
+
+
+
+#titleCard{
+  text-align: center;
+  color:black;
+}
+
+
+#ClickRegister{
+  color:white;
+
+
+}
+
+#textIndex{
+  color:white;;
+  
+}
+
+label{
+  color:black;
+}
+
+#optionNavbar{
+  color:white;
+}
+
+#footer{
+  background-color: #a8a8a8;
+}

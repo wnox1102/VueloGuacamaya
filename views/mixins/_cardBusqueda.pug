@@ -1,0 +1,35 @@
+mixin Card()
+    .row.align-items-center.justify-content-center
+        .col-sm-6
+            div(class="card card-lift shadow border-0")
+                .card-body
+                        form(action="", method="POST")
+                        .row
+                            .col-sm-6
+                                div(class="form-group focused")
+                                    div(class="input-group")
+                                        div(class="input-group-prepend")
+                                            span(class="input-group-text")
+                                                i(class="ni ni-calendar-grid-58")
+                                        input(class="form-control datepicker", type="text", value="06/03/2019", placeholder="Select a date", id='datepicker')
+                            .col-sm-6
+                                div(class="form-group focused")
+                                    div(class="input-group")
+                                        div(class="input-group-prepend")
+                                            span(class="input-group-text")
+                                                i(class="ni ni-calendar-grid-58")
+                                        input(class="form-control datepicker", type="text", value="06/03/2019", placeholder="Select a date", id='datepicker')
+                        .form-group
+                            label Origen:
+                            select.form-control(name="origen", id="origen")
+                                option(value="Miami") Miami
+                                option(value="Londres") Londres
+                                option(value="Atlanta") Atlanta
+                                option(value="Caracas") Caracas
+                        .form-group
+                            label Destino:
+                            select.form-control(name="destino", id="destino")
+                                option(value="Miami") Miami
+                                option(value="Londres") Londres
+                                option(value="Atlanta") Atlanta
+                                option(value="Caracas") Caraca

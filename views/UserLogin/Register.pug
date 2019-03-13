@@ -1,0 +1,41 @@
+extends Base
+
+block content
+  section.section.section-lg.login
+    div(class="shape shape-style-1 bg-gradient-default")
+      span
+      span
+      span
+      span
+      span
+      span
+    .container.pt-lg-md
+      .row.justify-content-center
+        .col-sm-6
+          .card.bg-secondary.shadow.border-0
+            .card-head.pt-3
+              h5#titleCard Ingresa sus datos
+            .card-body.px-lg-5.py-lg-5
+              form(action='/register', method='POST')
+                .form-group.mb-3
+                  .input-group.input-group-alternative
+                    input.form-control(placeholder="Correo", type="email", id="email", name="email", required)
+                .form-group
+                  .input-group.input-group-alternative
+                    input.form-control(placeholder="Contrasena", type="password", id="password", name="password", required)
+                .form-group
+                  .input-group.input-group-alternative
+                    input.form-control(placeholder="Nombre", type="text", id="name", name="name",required)
+                .form-group
+                    label Tipo de empleado
+                    select.form-control(name="Type", id="Type")
+                      option(value="Administrador") Administrador
+                      option(value="Encargado") Encargado
+                .text-center
+                  button(type="submit" class="btn btn-default btn-lg active") Registrarse
+
+                            
+                        
+
+
+        

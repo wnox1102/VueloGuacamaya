@@ -2,46 +2,35 @@
 html(lang="en")
   head
     // preload
-    link(rel="preload", href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css", as="style")
-    link(rel="preload", href="https://code.jquery.com/jquery-3.3.1.slim.min.js", as="script")
-    link(rel="preload", href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js", as="script")
-    link(rel="preload", href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js", as="script")
-    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+    link(rel="preload", href="/dist/main.css", as="style")
+    link(rel="preload", href="/vendor/jquery/jquery.min.js", as="script")
+    link(rel="preload", href="/vendor/popper/popper.min.js", as="script")
+    link(rel="preload", href="/vendor/bootstrap/bootstrap.min.js", as="script")
+    link(rel="preload", href="/dist/main.bundle.js", as="script")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Vuelos Guacamaya
-    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css", defer, async)
-    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
-    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
-    link(rel="stylesheet", href="./dist/main.css")
+    link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet")
+    link(rel="stylesheet", href="/vendor/nucleo/css/nucleo.css", async)
+    link(rel="stylesheet", href="/dist/main.css")
+    link(rel="stylesheet", href="/sass/styles.scss")
+    link(href="/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet")
+    link(type="text/css" href="/assets/css/argon.min.css" rel="stylesheet")
 
   body
-    block navbar
-      nav(class="navbar navbar-expand-lg" style="background-color: transparent")
-        a(href='/', class="navbar-brand" , style="color:black") VuelosGuacamaya
-        button(class="navbar-toggler",type="button", data-toggle="collapse", data-target="#navbarNav", aria-controls="navbarNav", aria-expanded="false", aria-label="Toggle navigation", style="background-image:url(http://qvlsl.mx/images/convocatoria/Guacamaya.png); background-size:cover;")
-          span(class="navbar-toggler-icon" style="color: black")
-        div(class="collapse navbar-collapse",id="navbarNav")
-          ul(class="navbar-nav")
-            li(class="nav-item"): a(class="nav-link" style="color: black;", href="/Vuelos") Vuelos
-            li(class="nav-item"): a(class="nav-link" style="color: black;", href="/Ofertas") Ofertas
-            li(class="nav-item"): a(class="nav-link" style="color: black;", href="/Reserva") Reserva
-            li(class="nav-item"): a(class="nav-link" style="color: black;", href="/Aeropuertos") Aeropuertos
-            li(class="nav-item"): a(class="nav-link" style="color: black;", href="/Create") CrearUser
-            li(class="nav-item dropdown")
-              a(class="nav-link dropdown-toggle",id="navbarDropdownMenuLink", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") Cuenta
-              div(class="dropdown-menu", aria-labelledby="navbarDropdownMenuLink")
-                a(class="dropdown-item", href="/Login" style="color: black;") Login
-                a(class="dropdown-item", href="/Register" style="color:black;") Register
-      .row
-        img(src="https://cdn.pixabay.com/photo/2016/05/20/20/40/london-1405911_960_720.jpg", alt="banner", style="background-size:cover; background-repeat:no-repeat;") 
-      block content
-      // Content
-      block scripts
-      script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js", defer)
-      script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js", defer)
-      script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js", defer)
-      script(src="https://code.jquery.com/jquery-3.3.1.min.js")
-
-      
+    header
+    include mixins/_navbar
+    +navbar(h.menu)
+    block content
+    // Content
+    include mixins/_footer
+    +footer(h.links)
+    block scripts
+      script(src="/vendor/jquery/jquery.min.js",defer)
+      script(src="/vendor/popper/popper.min.js",defer)
+      script(src="/vendor/bootstrap/bootstrap.min.js",defer)
+      script(src="/dist/main.bundle.js",defer)
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js", defer)
+      script(src="/js/argon.min.js",defer)
+      script(src="/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js", defer)

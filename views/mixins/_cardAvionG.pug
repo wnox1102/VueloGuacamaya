@@ -1,0 +1,26 @@
+mixin CardAvionG(option, text)
+    .row.align-items-center.justify-content-center
+        .col-sm-9
+            .card.card-lift.shadow.border-0(style="background-color:#e5e5e5")
+                .card-head.pt-3
+                    h4#titleCard Agregar un nuevo avion al sistema
+                .card-body.px-lg-5.py-lg-5
+                    form(action="", method="POST")
+                        .row
+                            each val in option
+                                .col-sm-3
+                                    label #{val.label}
+                                    select(id="modelo", name='modelo', class="form-control", placeholder="Selecciona un modelo")
+                                        -for(let i=0; i<val.text.length; i++)
+                                            option(value=`${val.text[i]}`) #{val.text[i]}
+                            each val in text
+                                .col-sm-3
+                                    .form-group
+                                        label #{val.text}
+                                        input(class='form-control', type="text", id=`${val.id}`, name=`${val.id}`, required)
+                        button.btn.btn-info.btn.lg(type="submit") Agregar Avion
+
+
+                                
+
+            

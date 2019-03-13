@@ -13,7 +13,7 @@ controller.getUser = async function (callback) {
     } catch (error) {
         callback(null, error);
     }
-}
+};
 
 
 controller.createUser = async function (data) {
@@ -23,7 +23,7 @@ controller.createUser = async function (data) {
         });
         // code goes here
 
-}
+};
 
 controller.deleteUser = async function (id, callback) {
     try {
@@ -36,7 +36,7 @@ controller.deleteUser = async function (id, callback) {
     } catch (error) {
         callback(error);
     }
-}
+};
 
 
 controller.UpdateUsers = async function (data,id, callback) {
@@ -55,10 +55,7 @@ controller.UpdateUsers = async function (data,id, callback) {
     } catch (error) {
         callback(error);
     }
-}
+};
 
-controller.mensaje= async function(){
-    console.log("mensaje");
-}
 
 module.exports = controller;

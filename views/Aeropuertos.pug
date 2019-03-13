@@ -1,44 +1,37 @@
 extends Base
+include mixins/svgSeparator
+include mixins/_footer
+
 
 block content 
-    .row
-        .col-sm-8
-            #Aero.card(class="shadow-lg p-3 mb-5  rounded")
-                .card-title: h2 LOS MEJORES AEROPUERTOS PARA TU ATENCION Y SERVICIO
-                hr
-                .card-body
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure nihil quia dignissimos ratione dolor hic nemo, ad dolorum. Itaque illo at dolores magnam tempore tenetur provident quaerat laboriosam. Deserunt, molestias?
-    br
-    br
-    br
-    hr
-    .row
-        .col-md-8
-            .card(class="shadow-lg p-3 mb-5  rounded", style="position:relative; left:50%;")
-                .card-title 
-                h3 PARIS
-                .card-body
-                    h3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quas sed id ratione qui perferendis odit quaerat quod repellendus enim alias, ipsam obcaecati excepturi quam dolorum ea minus distinctio nemo!
-    .row
-        .col-md-8
-            .card(class="shadow-lg p-3 mb-5  rounded")
-                .card-title 
-                h3 MIAMI
-                .card-body
-                    h3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quas sed id ratione qui perferendis odit quaerat quod repellendus enim alias, ipsam obcaecati excepturi quam dolorum ea minus distinctio nemo!
-    .row
-        .col-md-8
-            .card(class="shadow-lg p-3 mb-5  rounded", style="position:relative; left:50%;")
-                .card-title 
-                h3 LONDRES
-                .card-body
-                    h3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quas sed id ratione qui perferendis odit quaerat quod repellendus enim alias, ipsam obcaecati excepturi quam dolorum ea minus distinctio nemo!
-    .row
-        .col-md-8
-            .card(class="shadow-lg p-3 mb-5  rounded")
-                .card-title 
-                h3 CARACAS
-                .card-body
-                    h3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quas sed id ratione qui perferendis odit quaerat quod repellendus enim alias, ipsam obcaecati excepturi quam dolorum ea minus distinctio nemo!
+    section(class="section section-lg section-hero section-shaped")
+        div(class="shape shape-style-1 shape-default")
+        div(class="container shape-container d-flex align-items-center py-lg")
+            div(class="col px-0")
+                div(class="row align-items-center justify-content-center")
+                    div(class="col-lg-6 text-center")
+                        h5#textIndex AQUI PODRA ENCONTRAR LOS AEROPUERTOS DISPONIBLES
+        +Svg()
+    section(class="section section-lg section-hero section-shaped")
+        div(class="container shape-container d-flex align-items-center py-lg")
+            div(class="col px-0")
+                div(class="row align-items-center justify-content-center")
+                    div(class="col-lg-5 mb-5 mb-lg-0")
+                        div(class="col-lg-6 text-center")
+                            h5 Aeropuertos con los cuales se estan trabajando en el momento
+                    div(class="col-lg-5 mb-5 mb-lg-0")
+                        div(class="rounded shadow-lg overflow-hidden transform-perspective-right")
+                            // Ingresar codigo de carosuel para los aeropuertos.
+    section(class="section section-lg section-hero section-shaped")
+        div(class="shape shape-style-1 shape-default")
+        div(class="container shape-container d-flex align-items-center py-lg")
+            div(class="col px-0")
+                div(class="row align-items-center justify-content-center")
+                    h5 Se mostraran las estadisticas de los aeropuertos, donde se mostrara, cant de pasajeros, vuelos abordados y ganancias y esas cosas
+    section(class="section section-lg section-hero section-shaped")
+        div(class="container shape-container d-flex align-items-center py-lg")
+            div(class="col px-0")
+                div(class="row align-items-center justify-content-center")
+                    h4 mostrar estadisticas de los aeropuertos , como por ejemplo las tablas con ChartJS
+        
 

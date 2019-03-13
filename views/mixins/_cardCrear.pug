@@ -1,0 +1,22 @@
+mixin CardCrear(text, option)
+    .row.align-items-center.justify-content-center
+        .col-sm-6
+            div(class="card card-lift shadow border-0",style="background-color:#e5e5e5")
+                br
+                .card-title 
+                    h5#titleCard REGISTAR UN NUEVO EMPLEADO
+                hr
+                .card-body
+                    form(action="/Empleados/EmpleadosC", method="POST")
+                        each val in text    
+                            .form-group.mb-3
+                                label #{val.text}
+                                input.form-control(placeholder=`${val.text}`, type="text", id=`${val.id}`, name=`${val.id}`, required)
+                        each opt in option                          
+                            .form-group
+                                label #{opt.text}
+                                select.form-control(name="cargo", id="cargo")
+                                    -for(i=0; i<opt.option.length; i++)
+                                        option(value=`${opt.option[i]}`) #{opt.option[i]}
+                        .row.align-items-center.justify-content-center
+                            button.btn.btn-info.btn-lg(type="submit") CREAR

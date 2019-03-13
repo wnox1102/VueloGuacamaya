@@ -1,0 +1,16 @@
+mixin cardReserva(body)
+    .row.align-items-center.justify-content-center
+        .col-sm-6
+            div(class="card card-lift shadow border-0",style="background-color:#e5e5e5")
+                .card-body
+                    form(method="POST")
+                        .row
+                            each val in body
+                                .col-sm-4
+                                    label #{val.text}
+                                    input(class='form-control', type="text", id=`${val.id}`, name=`${val.id}`, required)
+                                    br
+                            
+                                    
+
+                                        

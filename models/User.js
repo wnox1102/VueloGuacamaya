@@ -20,7 +20,7 @@ const User = sequelize.define("User", {
   }
 });
 
-User.sync();
+//User.sync();
 
 /*
 User.encrypt = function ({ password }) {

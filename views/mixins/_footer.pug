@@ -1,5 +1,5 @@
-mixin footer()
-  footer.footer
+mixin footer(l)
+  footer.footer#footer
     .container
       hr
       .row.align-items-center.justify-content-md-between
@@ -8,9 +8,6 @@ mixin footer()
             a(href="/") Brand
         .col-md-6
           ul.nav.nav-footer.justify-content-end
-            li.nav-item
-              a.nav-link test 1
-            li.nav-item
-              a.nav-link test 2
-            li.nav-item
-              a.nav-link test 3
+            each val in l
+              li.nav-item
+                a.nav-link #{val.text}

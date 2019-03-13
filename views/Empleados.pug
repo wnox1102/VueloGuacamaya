@@ -1,0 +1,36 @@
+extends Base
+include mixins/_TableEmpleados
+include mixins/svgSeparator
+include mixins/_cardCrear
+include mixins/_NavigationPage
+block content
+    section(class="section section-lg section-hero section-shaped")
+        div(class="shape shape-style-1 shape-default")
+        div(class="container shape-container d-flex align-items-center py-lg")
+            div(class="col px-0")
+                div(class="row align-items-center justify-content-center")
+                    div(class="col-lg-6 text-center")
+                        h5#textIndex AQUI PODRA ENCONTRAR LA INFORMACION DE LOS EMPLEADOS, REGISTRAR NUEVOS EMPLEADOS, MODIFICARLOS Y ELIMINARLOS.
+        +Svg()
+    section(class="section section-lg section-hero section-shaped")
+        +CardCrear(h.empleado, h.option)
+    section(class="section section-lg section-hero section-shaped")
+        div(class="shape shape-style-1 shape-default")
+        div(class="container shape-container d-flex align-items-center py-lg")
+            div(class="col px-0")
+                div(class="row align-items-center justify-content-center")
+                    div(class="col-lg-6 text-center")
+                        h5#textIndex Lista de Empleados
+                    br
+                    br
+                    +TableEmpleados(empleado)
+                    +PageNav()
+        +Svg()
+    section(class="section section-lg section-hero section-shaped")
+        h3 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam vitae, iste voluptas cupiditate adipisci illum nostrum iure, assumenda omnis minus consequuntur maxime dolor. Laudantium nobis iure perspiciatis quis vel autem dolor placeat amet natus quas, similique, tempore veritatis aut architecto?
+
+
+
+
+
+

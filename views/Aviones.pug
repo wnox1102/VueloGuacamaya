@@ -1,0 +1,14 @@
+extends Base
+include mixins/svgSeparator
+include mixins/_cardAvionG
+block content
+    section(class="section section-lg section-hero section-shaped")
+        div(class="shape shape-style-1 shape-default")
+        div(class="container shape-container d-flex align-items-center py-lg")
+            div(class="col px-0")
+                div(class="row align-items-center justify-content-center")
+                    div(class="col-lg-6 text-center")
+                        h5#textIndex AQUI PODRA AGREGAR LOS AVIONES DISPONIBLES EN NUESTRO SISTEMA
+        +Svg()
+    section(class="section section-lg section-hero section-shaped")
+        +CardAvionG(h.Modelos)

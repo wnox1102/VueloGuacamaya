@@ -1,2 +1,3 @@
 import "../sass/styles.scss";
-console.log("Hello World");
+import './argon';
+console.log("Hello");
